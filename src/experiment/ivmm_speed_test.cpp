@@ -9,6 +9,7 @@
 #include  <boost/range/algorithm.hpp>
 #include  <boost/range/algorithm_ext.hpp>
 #include  <climits>
+#include  <cmath>
 //}}}
 using namespace std;
 
@@ -169,7 +170,7 @@ int main(int argc, char *argv[])
         for (int w : test_window) {
             double r = eval(path_for_window[-1], path_for_window[w]);
             cout << " lcs rate = " << r << " window = " << w << endl;
-            if (!::isnan(r)) {
+            if (!isnan(r)) {
                 lcs_sum[w] += r;
                 lcs_cnt[w]++;
             }
